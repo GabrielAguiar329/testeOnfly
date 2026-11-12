@@ -26,7 +26,7 @@ stdout.
 Os testes já estão em `tests/`. No início, todos falham — é esperado. Rode:
 
 ```bash
-pytest -q
+pytest -q 
 ```
 
 Corrija o código até todos passarem. **Não altere os testes fornecidos.** Se quiser, adicione
