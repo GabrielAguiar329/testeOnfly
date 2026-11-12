@@ -11,3 +11,9 @@ esse erro é bem parecido com o primeiro, era causado por que o método do calcu
 para solucionar, criei uma variavel *nights* e atribui o valor de chackout menos checkin com o atributo **days** atributo que calcula a diferença entre duas datas. após, retornei a multiplicação de *nights* por *rooms* como pedia o comentário do método.
 ### Testes passados após mudança
 após a mudança do método solucionei **test_nights.py**
+# terceiro erro solucionado
+## Falha na validação dos status faturaveis
+O método responsavél por validar os status das reservas estava retornando ao contrario do que a lógica pedia, o método excluia apenas as reservas com o *status* igual a 
+*"CANCELED"*, mantendo as reservas com status de *"NO_SHOW"* e as considerando faturável. para corrigir, eu em vez de verificar se o status **não** é "CANCELED", comecei a verificar se **É** "CONFIRMED". Assim, somente reservas confirmadas entram no faturamento. Descobri que o erro era no método após observer que no teste aparecia o *amount* de cada status, e como estava passando 120, e o valor correto era 100, o erro estava contabilizando o "NO_SHOW".
+### Testes passados após mudança
+após a mudança do método solucionei **test_status_rules.py**
